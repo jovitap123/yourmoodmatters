@@ -19,7 +19,7 @@ def handle_data():
     if model_output == 1:
         output_feeling = "distressed"
 
-    return render_template('index.html', output=f"It looks like you are /n {output_feeling}.")
+    return render_template('index.html', output=f"It looks like you are {output_feeling}.")
 
 
 if __name__ =="__main__":
