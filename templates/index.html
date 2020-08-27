@@ -23,12 +23,15 @@
 <body>
     <div class="w-50 p-3 text-center">
         <div class="position-relative" style=" position:relative; top: 150px;">
-            <h1 class=" text-center">Your Mood Matters!</h1>
+            <h1 style="color:black;text-align: center;"><b>Your Mood Matters</b></h1>
             <div>
+                <br>
                 <form action="{{ url_for('handle_data') }}" method="post">
                     <div class="form-group">
-                        <label for="feeling">How are you feeling?</label>
+                        <h3 style="color:black;text-align: center;"><b>How are you feeling?</b></h3>
+                        <!--<label  for="feeling">How are you feeling?</label>-->
                         <!-- <input type="feeling" name="feeling" class="input-lg" id="inputlg"> -->
+                        <br>
                         <input type="text" name="feeling">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>

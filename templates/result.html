@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+        body {
+            background-image: url("static/img/Relax.jpg");
+            background-color: #cccccc;
+
+        }
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 20%;
+		} 
+    </style>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	
+	<h1 style="color:black;text-align: center;"><b>Mental Health Check</b></h1>
+	<div class="Mental Health Check">
+
+	<br>
+	<br>
+
+	{% if prediction == 1%}
+	<h2 style="color:black;text-align: center;">It looks like you are distressed. Improve your mental health by visiting these resources:</h2>
+	<h2 style="color:black;text-align: center;">This phase shall soon pass.</h2>
+	<br>
+	<a href="https://www.youtube.com/watch?v=inpok4MKVLM"><img src="static/img/meditation.jpg" class="center"></a>
+	<h3 style="color:black;text-align: center; font-family: Arial, Helvetica, sans-serif;">Meditation</h3>
+	<br>
+	<br>
+	<a href="https://www.youtube.com/watch?v=ECxYJcnvyMw"><img src="static/img/exercise.jpg" class="center"></a>
+	<h3 style="color:black;text-align: center; font-family: Arial, Helvetica, sans-serif;">Exercise</h3>
+	<br>
+	<br>
+	<a href="https://www.ontarioparks.com/en"><img src="static/img/hiking.jpg" class="center"></a>
+	<h3 style="color:black;text-align: center; font-family: Arial, Helvetica, sans-serif;">Visit a Park</h3>
+	{% elif prediction == 0%}
+	<h2 style="color:black;text-align: center; font-family: Arial, Helvetica, sans-serif;">It looks like you are doing great. Hope you have an amazing day.</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
