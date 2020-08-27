@@ -3,7 +3,6 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing import sequence
 import re
-from bs4 import BeautifulSoup
 from nltk.stem.porter import PorterStemmer
 from flask import Flask, request, render_template
 import numpy as np
