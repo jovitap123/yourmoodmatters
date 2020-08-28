@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return render_template('index.html')
+        return render_template('index.html')
 
 #@app.route('/handle_data', methods=['POST'])
 #def handle_data():
@@ -1082,10 +1082,10 @@ def handle_data():
     
     model_output= np.round(best_model.predict(test_seq),0).astype(int)
     print(model_output)
-    if model_output == 1 :
-        output_feeling = "distressed"
-    else:
-        output_feeling= "fine"
+ #   if model_output == 1 :
+ #       output_feeling = "distressed"
+ #   else:
+ #       output_feeling= "fine"
 
     return render_template('result.html',prediction=model_output)
     #return render_template('index.html', output=f"It looks like you are {output_feeling}.")
